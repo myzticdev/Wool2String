@@ -1,61 +1,58 @@
 # Wool2String
 
-Turn your extra wool into string!
+**Craft 1 Wool into 4 String** — a tiny vanilla Minecraft Java datapack by [myzticdev](https://mc.myztic.dev/).
 
-**Wool2String** is a lightweight Minecraft Java Edition datapack that lets you craft wool back into string. Instead of letting spare wool pile up in your chests, turn it into useful materials for bows, fishing rods, leads, scaffolding and more.
+Works with all 16 wool colors · Inventory crafting grid or crafting table  
+No resource pack. No mods. No functions. No tick loop. Nothing else changes.
 
-## Crafting recipe
+**Downloads:** [GitHub Releases](https://github.com/myzticdev/Wool2String/releases)
 
-**1 Wool → 4 String**
+---
 
-Place a block of wool of any color anywhere in your inventory crafting grid or crafting table. Each block gives you four string.
+## Install
 
-## Features
+1. Download the ZIP for your Minecraft Java version from [GitHub Releases](https://github.com/myzticdev/Wool2String/releases).
+2. Put that ZIP in your world's `datapacks/` folder. **Install only one variant.**
+3. Reopen the world, or run `/reload` if you have permission.
+4. Confirm with `/datapack list enabled`, then place any wool block in your crafting grid to craft four string.
 
-- Works with all 16 wool colors.
-- Craft string directly in your inventory or at a crafting table.
-- Keeps existing vanilla recipes unchanged.
-- Works in singleplayer and on multiplayer servers.
-- No mods or resource packs required.
+If you download the **All-Versions** bundle, extract it first and use **one** of the inner ZIPs — do not drop the master bundle into `datapacks/`.
 
-## Supported Minecraft versions
+Works in singleplayer and multiplayer; on a server, only the server needs the datapack. The recipe is crafted manually and is not automatically unlocked in the recipe book.
 
-| Edition | Versions |
+Something broken? [Open an issue](https://github.com/myzticdev/Wool2String/issues) and include your Minecraft version.
+
+---
+
+## Compatibility
+
+| Minecraft Java | Download |
 | --- | --- |
-| Java Edition | 1.13–26.3 |
-| Java Edition snapshot preview | 26.4 snapshots 1–10 |
+| 26.4 Snapshots 1–10 | `Wool2String-26.4-snapshot-1-10.zip` (snapshot preview) |
+| 1.20.2 – 26.3 | `Wool2String-1.20.2-26.3.zip` |
+| 1.20 – 1.20.1 | `Wool2String-1.20-1.20.1.zip` |
+| 1.19.4 | `Wool2String-1.19.4.zip` |
+| 1.19 – 1.19.3 | `Wool2String-1.19-1.19.3.zip` |
+| 1.18.2 | `Wool2String-1.18.2.zip` |
+| 1.18 – 1.18.1 | `Wool2String-1.18-1.18.1.zip` |
+| 1.17 – 1.17.1 | `Wool2String-1.17-1.17.1.zip` |
+| 1.16.2 – 1.16.5 | `Wool2String-1.16.2-1.16.5.zip` |
+| 1.15 – 1.16.1 | `Wool2String-1.15-1.16.1.zip` |
+| 1.14 – 1.14.4 | `Wool2String-1.14-1.14.4.zip` |
+| 1.13 – 1.13.2 | `Wool2String-1.13-1.13.2.zip` |
 
-Compatibility has been checked against the supported datapack formats. Not every version has been tested in-game. Bedrock Edition is not supported.
+Stable compatibility targets cover Java 1.13 through 26.3. The separate 26.4 snapshot preview covers snapshots 1–10 only, not later snapshots or the final 26.4 release.
 
-## Download and installation
+Compatibility is validated against datapack formats and recipe schemas; manual gameplay testing has not been completed. Bedrock Edition is not supported.
 
-1. Visit the [Downloads / Releases page](https://github.com/myzticdev/Wool2String/releases) and choose the datapack ZIP that matches your Minecraft version.
-2. Open your world's `datapacks` folder. In singleplayer, select your world, click **Edit**, then **Open World Folder**.
-3. Place the downloaded version-specific ZIP inside the `datapacks` folder. Do not extract it.
-4. Reopen your world or run `/reload`.
-5. Place any wool block in your crafting grid to get four string!
+---
 
-For multiplayer, install the datapack in the server's world folder. Only the server needs the datapack.
+## Links
 
-**Using the All Versions download?** Extract the outer bundle first, then install only the ZIP for your Minecraft version.
-
-## Frequently asked questions
-
-**Does it work with colored wool?**  
-Yes! All 16 colors produce four regular string.
-
-**Why isn't the recipe showing in my recipe book?**  
-The datapack does not automatically unlock the recipe in the recipe book. You can craft it manually with the default Minecraft crafting settings.
-
-**Does everyone on my server need to install it?**  
-No. Players can use the recipe once the datapack is enabled on the server.
-
-## Support
-
-Found a bug or having trouble installing the datapack? [Open an issue on GitHub](https://github.com/myzticdev/Wool2String/issues).
-
-Created by [MyzticDev](https://github.com/myzticdev).
-
-More Minecraft datapacks: [Flesh2Leather](https://github.com/myzticdev/flesh2leather) · [CraftSaddles](https://github.com/myzticdev/CraftSaddles)
+- **Website:** [mc.myztic.dev](https://mc.myztic.dev/)
+- **Releases:** [GitHub Releases](https://github.com/myzticdev/Wool2String/releases)
+- **Issues:** [GitHub Issues](https://github.com/myzticdev/Wool2String/issues)
+- **Creator:** [github.com/myzticdev](https://github.com/myzticdev)
+- **Other datapacks:** [Flesh2Leather](https://github.com/myzticdev/flesh2leather) · [CraftSaddles](https://github.com/myzticdev/CraftSaddles)
 
 [Development documentation](DEVELOPMENT.md)
