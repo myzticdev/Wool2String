@@ -69,7 +69,8 @@ def active_recipes(files,fmt,entries):
 def check_pack(files,target):
     name,fmt,schema=target
     require(parse(files["pack.mcmeta"])==meta(target),"Invalid metadata "+name)
-    required={"pack.mcmeta",recipe_path(fmt)}
+    required={"pack.mcmeta","pack.png",recipe_path(fmt)}
+    require(files["pack.png"].startswith(b"\x89PNG\r\n\x1a\n"),"Invalid PNG icon")
     base="strings" if schema=="snapshot" else "legacy" if schema=="modern" else schema
     check_recipe(parse(files[recipe_path(fmt)]),base)
     if schema=="modern":
@@ -108,7 +109,7 @@ def safe_dir(path):
 def release_files(root=ROOT):
     src=root/"src"
     safe_dir(src)
-    expected={"targets.json"}|{f"recipes/{s}.json" for s in ("plain","legacy","stack","strings")}
+    expected={"targets.json","pack.png"}|{f"recipes/{s}.json" for s in ("plain","legacy","stack","strings")}
     require({p.relative_to(src).as_posix() for p in src.rglob("*") if p.is_file()}==expected,
             "Unexpected/missing source")
     require(parse((src/"targets.json").read_bytes())==
@@ -116,11 +117,12 @@ def release_files(root=ROOT):
         "Targets file differs")
     for schema in ("plain","legacy","stack","strings"):
         check_recipe(parse((src/f"recipes/{schema}.json").read_bytes()),schema)
+    icon=(src/"pack.png").read_bytes()
     output={}
     for target in TARGETS:
         name,fmt,schema=target
         base="strings" if schema=="snapshot" else "legacy" if schema=="modern" else schema
-        files={"pack.mcmeta":encode(meta(target)),recipe_path(fmt):encode(expected_recipe(base))}
+        files={"pack.png":icon,"pack.mcmeta":encode(meta(target)),recipe_path(fmt):encode(expected_recipe(base))}
         if schema=="modern":
             for directory,low,_,overlay_schema in OVERLAYS:
                 files[directory+"/"+recipe_path(low)]=encode(expected_recipe(overlay_schema))

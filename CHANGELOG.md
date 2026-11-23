@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.1] - 2026-11-23
+
+- Added the Wool2String crafting-table icon to every datapack ZIP and the project README.
+- No recipe or compatibility changes. Manual gameplay testing remains outstanding.
+
 ## [1.0.0] - 2026-11-23
 
 - Initial release: craft one wool block of any color into four string.

@@ -1,5 +1,7 @@
 # Wool2String
 
+![Wool2String icon](src/pack.png)
+
 **Craft 1 Wool into 4 String** — a tiny vanilla Minecraft Java datapack by [myzticdev](https://mc.myztic.dev/).
 
 Works with all 16 wool colors · Inventory crafting grid or crafting table  

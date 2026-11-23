@@ -33,6 +33,7 @@ class TestBuild(unittest.TestCase):
             with zipfile.ZipFile(io.BytesIO(self.outputs[name])) as z:
                 data={p:z.read(p) for p in z.namelist()}
                 build.check_pack(data,target)
+                self.assertEqual(data["pack.png"],(build.ROOT/"src/pack.png").read_bytes())
                 self.assertIsNone(z.testzip())
     def test_overlay_boundaries(self):
         with zipfile.ZipFile(io.BytesIO(self.outputs["Wool2String-1.20.2-26.3.zip"])) as z:
